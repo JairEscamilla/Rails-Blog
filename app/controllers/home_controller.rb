@@ -1,4 +1,4 @@
 class HomeController < ApplicationController
-  def index
+  def index # yarn add bootstrap para agregar bootstrap
   end
 end
