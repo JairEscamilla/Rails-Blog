@@ -22,4 +22,10 @@ class ArticlesController < ApplicationController
         @article = Article.create(title: params[:article][:title], content: params[:article][:content])
         render json: @article
     end
+
+    def destroy
+        @article = Article.find(params[:id])
+        @article.destroy
+        redirect_to root_path
+    end
 end
