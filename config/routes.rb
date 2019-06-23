@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/bienvenida", to: "home#index"
 
   get "articles", to: "articles#index"
-
+  get "articles/user/:id", to: "articles#from_author"
   get "articles/new", to: "articles#new", as: :new_articles
   post "articles", to: "articles#create"
   get "articles/:id", to: "articles#show"
