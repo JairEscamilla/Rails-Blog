@@ -35,7 +35,7 @@ class ArticlesController < ApplicationController
     end
 
     def from_author
-        @user = User.find(params[:id])
+        @user = User.find(params[:user_id])
     end
 
     def article_params

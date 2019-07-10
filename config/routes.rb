@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get "/bienvenida", to: "home#index"
-
+  # get "/bienvenida", to: "home#index"
+  
+  resources :articles do
+    get "user/:user_id", to: "articles#from_author", on: :collection
+  end
+=begin
   get "articles", to: "articles#index"
   get "articles/user/:id", to: "articles#from_author"
   get "articles/new", to: "articles#new", as: :new_articles
@@ -13,5 +17,5 @@ Rails.application.routes.draw do
   get "articles/:id/edit", to: "articles#edit"
   patch "articles/:id", to: "articles#update", as: :article
   delete "articles/:id", to: "articles#destroy"
-
+=end
 end
