@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 
     def update
         @article.update(article_params)
+        @article.save_categories
         redirect_to @article
     end
 
@@ -22,6 +23,7 @@ class ArticlesController < ApplicationController
 
     def create
         @article = Article.create(article_params)
+        @article.save_categories
         redirect_to @article
     end
 
@@ -39,6 +41,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-        params.require(:article).permit(:title, :content)
+        params.require(:article).permit(:title, :content, :category_elements)
     end
 end
