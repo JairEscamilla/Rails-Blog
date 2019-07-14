@@ -8,7 +8,10 @@ class Article < ApplicationRecord
     def save_categories
         categories_array = category_elements.split(",")
         categories_array.each do |category_id|
-            HasCategory.create(article: self, category_id: category_id)
+            # HasCategory.find_or_create_by(article: self, category_id: category_id)
+            unless HasCategory.where(article: self, category_id: category_id).any?
+                HasCategory.create(article: self, category_id: category_id)
+            end
         end
     end
 end
