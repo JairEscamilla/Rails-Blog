@@ -30,6 +30,7 @@ class ArticlesController < ApplicationController
     end
 
     def destroy
+        @article.categories.destroy_all
         @article.destroy
         redirect_to root_path
     end
