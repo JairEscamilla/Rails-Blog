@@ -9,7 +9,14 @@
 </div>
 <div class = "field">
     <%= form.label :content %>
-    <%= form.rich_text_area :content %>
+    <div class="row">
+        <% @categories.each do |element| %>
+            <label class = "col-6 col-sm-4">
+                <%= form.check_box :category_elements, {multiple: true}, element.id, nil %>
+                <%= element.title %>
+            </label>
+        <% end %>
+    </div>
 </div>
 <div>
     <%= form.submit %>
