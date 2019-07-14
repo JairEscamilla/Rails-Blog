@@ -9,6 +9,9 @@
         <li class = "nav-item">
             <%= link_to 'Escribir', new_article_path, class: "nav-link" %>
         </li>
+        <li class = "nav-item">
+            <%= link_to 'Mi perfil', perfil_path, class: "nav-link" %>
+        </li>
     <% end %>
     
     <% if user_signed_in? %>
