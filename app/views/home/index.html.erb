@@ -1,5 +1,11 @@
 <div class="large-container center-block">
-    <h1>Bienvenido <%= current_user.email %></h1>
+    <h1>Bienvenido 
+    <% if user_signed_in? and current_user.name == "Name" %>
+        <%= current_user.email %>
+    <% else %>
+        <%= current_user.name %>
+    <% end %>
+    </h1>
 </div>
 <div class="large-container center-block">
     Escribe articulos para toda una comunidad y comparte lo que piensas. 
