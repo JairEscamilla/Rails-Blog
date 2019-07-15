@@ -9,9 +9,10 @@ Rails.application.routes.draw do
     get "user/:user_id", to: "articles#from_author", on: :collection
   end
   get "perfil", to: "users#edit"
+  get "articles/user/:id", to: "articles#from_author"
+ 
 =begin
   get "articles", to: "articles#index"
-  get "articles/user/:id", to: "articles#from_author"
   get "articles/new", to: "articles#new", as: :new_articles
   post "articles", to: "articles#create"
   get "articles/:id", to: "articles#show"
