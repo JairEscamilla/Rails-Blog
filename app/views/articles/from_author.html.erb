@@ -1,4 +1,10 @@
 <div class="large-container center-block">
-    <h1>Articulos publicados por: <%= @user.email %></h1>
+    <h1>Articulos publicados por: 
+    <% if user_signed_in? and current_user.name == "Name" %>
+      <%= @user.email %>
+    <% else %>
+        <%= @user.name %>
+    <% end %>
+    </h1>
     <%= render @user.articles%>
 </div>
