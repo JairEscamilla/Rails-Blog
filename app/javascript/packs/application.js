@@ -19,3 +19,4 @@ import 'css/styles'
 
 require("trix")
 require("@rails/actiontext")
+alert("Hola");
