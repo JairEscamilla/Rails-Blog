@@ -17,7 +17,11 @@
            </span> 
         <% end %>
     </div>
-    <div>
-        <%= link_to "Eliminar el articulo", @article, method: :delete %>
-    </div>
+    <% if current_user.id == @article.user.id %>
+        <div>
+            <strong>Controles del articulo: </strong>
+            <%= link_to "Eliminar el articulo", @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to "Editar el articulo", edit_article_path(@article) %>
+        </div>
+    <% end %>
 </div>
