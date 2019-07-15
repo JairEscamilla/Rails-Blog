@@ -11,6 +11,10 @@
             <%= form.file_field :avatar %>
         </div>
         <div class="field">
+            <%= form.label :name %>
+            <%= form.text_field :name %>
+        </div>
+        <div class="field">
             <%= form.submit "Guardar", class: "btn btn-primary" %>
         </div>
     <% end %>
