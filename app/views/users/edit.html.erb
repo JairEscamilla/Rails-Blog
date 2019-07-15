@@ -15,6 +15,10 @@
             <%= form.text_field :name %>
         </div>
         <div class="field">
+            <%= form.label :age %>
+            <%= form.number_field :age, min: 0, max: 99 %>
+        </div>
+        <div class="field">
             <%= form.submit "Guardar", class: "btn btn-primary" %>
         </div>
     <% end %>
