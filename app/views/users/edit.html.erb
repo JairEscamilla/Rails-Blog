@@ -19,6 +19,10 @@
             <%= form.number_field :age, min: 0, max: 99 %>
         </div>
         <div class="field">
+            <%= form.label :job %>
+            <%= form.text_field :job %>
+        </div>
+        <div class="field">
             <%= form.submit "Guardar", class: "btn btn-primary" %>
         </div>
     <% end %>
