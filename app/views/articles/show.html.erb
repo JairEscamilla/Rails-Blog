@@ -1,7 +1,15 @@
 <div class="large-container center-block">
     <h1><%= @article.title %></h1>
     <div>
-        <p>Escrito por <strong><%= link_to @article.user.email, action: :from_author, id: @article.user %></strong></p>
+        <p>Escrito por
+            <strong>
+                <% if @article.user.name == "Name" %>
+                    <%= link_to @article.user.email, action: :from_author, id: @article.user %>
+                <% else %>
+                    <%= link_to @article.user.name, action: :from_author, id: @article.user %>
+                <% end %> 
+            </strong>
+        </p>
         <% if current_user.avatar.attached? %>
             <%= image_tag url_for(current_user.avatar), height: 30 %>
         <% end %>
