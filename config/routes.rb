@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   get "perfil", to: "users#edit"
   get "articles/user/:id", to: "articles#from_author"
- 
+  get "myarticles/:id", to: "articles#myarticles"
 =begin
   get "articles", to: "articles#index"
   get "articles/new", to: "articles#new", as: :new_articles

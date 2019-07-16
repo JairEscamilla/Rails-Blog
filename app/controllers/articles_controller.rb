@@ -42,7 +42,10 @@ class ArticlesController < ApplicationController
     def from_author
         @user = User.find(params[:user_id])
     end
-
+    def myarticles
+        user = User.where(id: params[:id])
+        @articles = user.first.articles
+    end
     def article_params
         params.require(:article).permit(:title, :content, category_elements: [])
     end

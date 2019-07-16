@@ -15,6 +15,9 @@
         <li class = "nav-item">
             <%= link_to 'Crear categoria', new_category_path, class: "nav-link" %>
         </li>
+        <li class = "nav-item">
+            <%= link_to 'Mis articulos', {controller: :articles, action: :myarticles, id: current_user.id}, class: "nav-link" %>
+        </li>
     <% end %>
     
     <% if user_signed_in? %>

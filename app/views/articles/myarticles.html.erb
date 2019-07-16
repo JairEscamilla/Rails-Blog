@@ -1,0 +1,7 @@
+<div class = "large-container center-block">
+    <h1>Estos son los articulos que has escrito: </h1>
+    <% if @articles.count == 0 %>
+      <p>Aún no has escrito articulos):</p>
+    <% end %>
+    <%= render partial: @articles %>
+</div>
