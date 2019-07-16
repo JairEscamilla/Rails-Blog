@@ -12,6 +12,9 @@
         <li class = "nav-item">
             <%= link_to 'Mi perfil', perfil_path, class: "nav-link" %>
         </li>
+        <li class = "nav-item">
+            <%= link_to 'Crear categoria', new_category_path, class: "nav-link" %>
+        </li>
     <% end %>
     
     <% if user_signed_in? %>

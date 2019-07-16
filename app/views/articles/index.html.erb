@@ -1,4 +1,7 @@
 <div class = "large-container center-block">
     <h1>Articulos: </h1>
+    <% if @articles.count == 0 %>
+      <p>Aún no hay articulos publicados):</p>
+    <% end %>
     <%= render partial: @articles %>
 </div>
