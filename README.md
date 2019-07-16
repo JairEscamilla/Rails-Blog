@@ -1,24 +1,30 @@
-# README
+# Ruby On Rails Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+_Este proyecto funciona a manera de un blog donde cualquier persona puede registrarse para comenzar a escribir lo que piensan y leer articulos de otras personas._
 
-Things you may want to cover:
+### Acceso 🔧
 
-* Ruby version
+_Puedes comenzar a usar el blog desde haciendo click [aquí](https://jairrailsblog.herokuapp.com/)_
 
-* System dependencies
 
-* Configuration
+## Construido con 🛠️
 
-* Database creation
+_Menciona las herramientas que utilizaste para crear tu proyecto_
 
-* Database initialization
+* [Ruby On Rails 6.0](https://edgeguides.rubyonrails.org/6_0_release_notes.html) - El framework web backend usado.
+* [Bootstrap](https://getbootstrap.com/) - El framework web frontend usado.
 
-* How to run the test suite
+## Autores ✒️
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* **Allan Jair Escamilla Hernández** - *Desarrollador* - [JairEscamilla](https://github.com/JairEscamilla)
+* **Uriel Hernández** - *Desarrollador* - [urielhdz](https://github.com/urielhdz)
 
-* ...
+
+
+## Agradecimientos 🎁
+
+* [Códigofacilito](https://codigofacilito.com/)
+
+
+
